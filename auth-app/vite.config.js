@@ -5,10 +5,6 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      server: {
-        host: "0.0.0.0",
-        port: process.env.PORT || 3001, // Use Render's dynamic port
-      },
       name: "authApp",
       filename: "remoteEntry.js",
       exposes: {
@@ -20,6 +16,10 @@ export default defineConfig({
       shared: ["react", "react-dom", "@apollo/client"],
     }),
   ],
+  server: {
+    host: "0.0.0.0",
+    port: parseInt(process.env.PORT) || 3001, // Correct placement
+  },
   build: {
     modulePreload: false,
     outDir: "dist",
