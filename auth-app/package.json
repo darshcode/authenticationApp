@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3001 --strictPort",
-    "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --port=3001 --strictPort",
-    "deploy": "npm run build && npm run preview"
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview --port=$PORT",
+  "start": "vite preview --port=$PORT",
+  "deploy": "npm run build && npm start"
   },
   "dependencies": {
     "@apollo/client": "^3.13.5",
