@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
+
 export default defineConfig({
   plugins: [
     react(),
@@ -18,7 +19,12 @@ export default defineConfig({
   ],
   server: {
     host: "0.0.0.0",
-    port: parseInt(process.env.PORT) || 3001, // Correct placement
+    port: parseInt(process.env.PORT) || 3001,
+  },
+  preview: {
+    port: parseInt(process.env.PORT) || 3001,
+    host: "0.0.0.0",
+    allowedHosts: ["authenticationapp-mylj.onrender.com"],
   },
   build: {
     modulePreload: false,
