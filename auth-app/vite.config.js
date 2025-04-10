@@ -12,9 +12,16 @@ export default defineConfig({
         "./AuthComponent": "./src/App.jsx",
       },
       remotes: {
-        nurseApp: "http://localhost:3002/assets/remoteEntry.js",
+        nurseApp: "https://nurse-app.onrender.com/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom", "@apollo/client"],
+      shared: [
+        "react",
+        "react-dom",
+        "@apollo/client",
+        "bootswatch",
+        "bootstrap",
+        "lucide-react",
+      ],
     }),
   ],
   server: {
