@@ -24,13 +24,16 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: parseInt(process.env.PORT) || 3001,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   },
   preview: {
+    host: "0.0.0.0",
     port: parseInt(process.env.PORT) || 3001,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
-    host: "0.0.0.0",
     allowedHosts: ["authenticationapp-mylj.onrender.com"],
   },
   build: {
