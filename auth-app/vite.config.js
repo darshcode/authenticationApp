@@ -27,6 +27,9 @@ export default defineConfig({
   },
   preview: {
     port: parseInt(process.env.PORT) || 3001,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     host: "0.0.0.0",
     allowedHosts: ["authenticationapp-mylj.onrender.com"],
   },
