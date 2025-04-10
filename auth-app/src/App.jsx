@@ -31,8 +31,19 @@ function App({ onUserChange }) {
   };
 
   return (
-    <div>
-      <h1> app jsx </h1>
+    <div className="container mt-4">
+      <h1 className="mb-3">Authentication</h1>
+      {!isAuthenticated ? (
+        <AuthForm
+          onAuthSuccess={handleAuthSuccess}
+          onUserChange={onUserChange}
+        />
+      ) : (
+        <div>
+          <p className="mb-2">You are logged in.</p>
+          <LogoutButton onLogout={handleLogout} />
+        </div>
+      )}
     </div>
   );
 }

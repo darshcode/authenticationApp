@@ -9,11 +9,9 @@ export default defineConfig({
       name: "authApp",
       filename: "remoteEntry.js",
       exposes: {
-        "./AuthComponent": "./src/App.jsx",
+        "./AuthAppComponent": "./src/App.jsx",
       },
-      remotes: {
-        nurseApp: "https://nurse-app.onrender.com/assets/remoteEntry.js",
-      },
+      remotes: {},
       shared: [
         "react",
         "react-dom",
