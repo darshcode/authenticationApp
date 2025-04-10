@@ -16,7 +16,6 @@ export default defineConfig({
         "react",
         "react-dom",
         "@apollo/client",
-        "bootswatch",
         "bootstrap",
         "lucide-react",
       ],
