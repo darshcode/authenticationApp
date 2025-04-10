@@ -19,6 +19,7 @@ export default defineConfig({
         "bootstrap",
         "lucide-react",
       ],
+      builder: "vite",
     }),
   ],
   server: {
